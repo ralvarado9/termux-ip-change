@@ -1,7 +1,7 @@
+cat > watch_ip.py <<'EOF'
 #!/data/data/com.termux/files/usr/bin/env python3
 # -----------------------------------------------------
 # Termux IP Change Tools — by Z3R0 para Friends School
-# https://github.com/<TU_USUARIO>/termux-ip-change
 # -----------------------------------------------------
 import requests, time, subprocess
 
@@ -23,3 +23,6 @@ while True:
         subprocess.run(["termux-notification", "--title", "IP cambiada",
                         "--content", f"{prev_ip} → {ip} ({country})"])
         prev_ip = ip
+EOF
+
+chmod +x watch_ip.py
